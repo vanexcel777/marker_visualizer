@@ -1,0 +1,16 @@
+<launch>
+	
+	<node pkg="marker_vizualiser" name="publish_marker" type="publish_marker.py" output="screen"/>
+ 		
+	<node pkg="marker_vizualiser" name="publish_marker_array" type="publish_marker_array.py" output="screen"/>
+	
+	<node pkg="marker_vizualiser" name="random_walk" type="random_walk.py" output="screen"/>
+	
+	<node pkg="marker_vizualiser" name="cercle" type="cercle.py" output="screen"/>
+	
+	<node pkg="marker_vizualiser" name="polygone" type="polygone.py" output="screen"/>
+	
+	
+	<node pkg="rviz" name="rviz" type="rviz" args="-d $( find marker_vizualiser)/rviz/marker_vizualiser.rviz" output="screen" />
+
+</launch>
